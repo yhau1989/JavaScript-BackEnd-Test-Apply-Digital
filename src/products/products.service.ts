@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Injectable, NotFoundException, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Repository, FindManyOptions } from 'typeorm';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { Product } from './entities/product.entity';
@@ -54,7 +54,7 @@ export class ProductsService {
     const limit = 5;
     const skip = (page - 1) * limit;
     const queryFilters = this.buildFilters(filters);
-    const totalCount = await this.productRepository.count(queryFilters);
+    const totalCount = await this.productRepository.count({ where: queryFilters } as FindManyOptions<Product>);
     const totalPages = Math.ceil(totalCount / limit);
     const products = await this.productRepository.find({
       skip,

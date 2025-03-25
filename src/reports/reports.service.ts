@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Product } from '../products/entities/product.entity';
-import { Repository } from 'typeorm';
+import { Repository, FindOptionsWhere } from 'typeorm';
 
 @Injectable()
 export class ReportsService {
@@ -34,7 +33,7 @@ export class ReportsService {
     }
 
     const totalProducts = await this.productRepository.count();
-    const nonDeletedProducts = await this.productRepository.countBy({ ...filters });
+    const nonDeletedProducts = await this.productRepository.countBy(filters as FindOptionsWhere<Product>);
     if (totalProducts === 0) return 0;
 
     return (nonDeletedProducts / totalProducts) * 100;
