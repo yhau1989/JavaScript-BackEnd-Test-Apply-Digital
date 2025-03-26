@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: nestjs_app
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    environment:
+      CONTENTFUL_SPACE_ID:
+      CONTENTFUL_ACCESS_TOKEN:
+      CONTENTFUL_ENVIRONMENT: master
+      CONTENTFUL_CONTENT_TYPE: product
+      COTENFULL_API_URL: https://cdn.contentful.com/
+      DB_URI:
+      DB_SYNCHRONIZE: 'true'
+      PORT: '3000'
+      JWT_SECRET:
+    depends_on:
+      - mongodb
+    command: ['npm', 'run', 'start:prod']
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  mongodb:
+    image: mongo:6
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME:
+      MONGO_INITDB_ROOT_PASSWORD:

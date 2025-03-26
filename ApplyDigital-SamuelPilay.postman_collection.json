@@ -1,0 +1,594 @@
+{
+  "info": {
+    "_postman_id": "4278b2fa-f654-4e6b-97b5-1e25a5ce64d7",
+    "name": "ApplyDigital-SamuelPilay",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15375646"
+  },
+  "item": [
+    {
+      "name": "reports",
+      "item": [
+        {
+          "name": "reports/non-deleted-percentage",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd1ZXN0Iiwic3ViIjoiZ3Vlc3RfaWQiLCJpYXQiOjE3NDI4NTM3MDEsImV4cCI6MTc0Mjg1NzMwMX0.Qazf0f7wEqh8YuE1jrCWx1kunlaELQEyDblzkyrmy3c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reports/non-deleted-percentage?withPrice=true",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reports", "non-deleted-percentage"],
+              "query": [
+                {
+                  "key": "withPrice",
+                  "value": "true"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reports/deleted-percentage",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd1ZXN0Iiwic3ViIjoiZ3Vlc3RfaWQiLCJpYXQiOjE3NDI4NTM3MDEsImV4cCI6MTc0Mjg1NzMwMX0.Qazf0f7wEqh8YuE1jrCWx1kunlaELQEyDblzkyrmy3c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reports/deleted-percentage",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reports", "deleted-percentage"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reports/custom-report",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd1ZXN0Iiwic3ViIjoiZ3Vlc3RfaWQiLCJpYXQiOjE3NDI4NTM3MDEsImV4cCI6MTc0Mjg1NzMwMX0.Qazf0f7wEqh8YuE1jrCWx1kunlaELQEyDblzkyrmy3c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reports/custom-report",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reports", "custom-report"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "products/pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/page/1?name=Apple Mi Watch",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", "page", "1"],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Apple Mi Watch"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "products/findAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/ZIMPDOPD",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", "ZIMPDOPD"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "products/by-sku",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "products/update",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Panasonic MediaPad M5 samo\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/products/T348VOUG",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", "T348VOUG"]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Panasonic MediaPad M5 samo\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/products/T348VOUG",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3000",
+                  "path": ["products", "T348VOUG"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "267"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"10b-uNLZCFkXyrvJ8Lzo791+TP33iKU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 24 Mar 2025 22:18:54 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"67e1475f5b6d12325aadaef3\",\n    \"sku\": \"T348VOUG\",\n    \"name\": \"Panasonic MediaPad M5 samo\",\n    \"brand\": \"Panasonic\",\n    \"model\": \"MediaPad M5\",\n    \"category\": \"Tablet\",\n    \"color\": \"Blue\",\n    \"price\": 1044.69,\n    \"currency\": \"USD\",\n    \"stock\": 87,\n    \"deleted\": false,\n    \"creation_date\": \"2025-03-24T11:51:59.125Z\"\n}"
+            },
+            {
+              "name": "error",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Panasonic MediaPad M5 samo\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/products/T348VOUG22222",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3000",
+                  "path": ["products", "T348VOUG22222"]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "91"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"5b-AcmtGV1uCQVr+percjMV1jrMDB0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 24 Mar 2025 22:19:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Product with SKU T348VOUG22222 not found\",\n    \"error\": \"Not Found\",\n    \"statusCode\": 404\n}"
+            }
+          ]
+        },
+        {
+          "name": "products/create",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sku\": \"ZIMPDOQA\",\n    \"name\": \"Apple Mi Watch\",\n    \"brand\": \"Apple\",\n    \"model\": \"Mi Watch\",\n    \"category\": \"Smartwatch\",\n    \"color\": \"Rose Gold\",\n    \"price\": 1410.29,\n    \"currency\": \"USD\",\n    \"stock\": 7,\n    \"deleted\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/products",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products"]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Panasonic MediaPad M5 samo\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/products/T348VOUG",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3000",
+                  "path": ["products", "T348VOUG"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "267"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"10b-uNLZCFkXyrvJ8Lzo791+TP33iKU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 24 Mar 2025 22:18:54 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"67e1475f5b6d12325aadaef3\",\n    \"sku\": \"T348VOUG\",\n    \"name\": \"Panasonic MediaPad M5 samo\",\n    \"brand\": \"Panasonic\",\n    \"model\": \"MediaPad M5\",\n    \"category\": \"Tablet\",\n    \"color\": \"Blue\",\n    \"price\": 1044.69,\n    \"currency\": \"USD\",\n    \"stock\": 87,\n    \"deleted\": false,\n    \"creation_date\": \"2025-03-24T11:51:59.125Z\"\n}"
+            },
+            {
+              "name": "error",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Panasonic MediaPad M5 samo\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/products/T348VOUG22222",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3000",
+                  "path": ["products", "T348VOUG22222"]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "91"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"5b-AcmtGV1uCQVr+percjMV1jrMDB0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 24 Mar 2025 22:19:19 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Product with SKU T348VOUG22222 not found\",\n    \"error\": \"Not Found\",\n    \"statusCode\": 404\n}"
+            }
+          ]
+        },
+        {
+          "name": "products/findOne",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/UEBN4YX5",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", "UEBN4YX5"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "products/delete",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/products/FRGJWMXC",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["products", "FRGJWMXC"]
+            }
+          },
+          "response": [
+            {
+              "name": "ok",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/products/FRGJWMXC",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3000",
+                  "path": ["products", "FRGJWMXC"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "plain",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 24 Mar 2025 22:10:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "0"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "error",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/products/FRGJWMXC2222",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "3000",
+                  "path": ["products", "FRGJWMXC2222"]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "90"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"5a-pXPe9SydoCR77CqFcDCaO2tGdzc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 24 Mar 2025 22:10:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Product with SKU FRGJWMXC2222 not found\",\n    \"error\": \"Not Found\",\n    \"statusCode\": 404\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "auth/login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\" : \"guest\",\n    \"password\": \"guest_password\"\n\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["auth", "login"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

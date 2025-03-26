@@ -10,10 +10,11 @@
 1. Use Node.js v22
 2. Run `yarn install`
 3. Create and fill the `.env` file with the information received in the mail
-4. Run `yarn test:cov`
-5. Run `yarn start:dev`
-6. Import Postman configuration received in the mail
-7. Happy testing API 🙂
+4. Run `yarn lint`
+5. Run `yarn test:cov`
+6. Run `yarn start:dev`
+7. Import Postman configuration from
+8. Happy testing API 🙂
 
 ## Docker
 
