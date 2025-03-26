@@ -1,3 +1,5 @@
+[![CI](https://github.com/yhau1989/JavaScript-BackEnd-Test-Apply-Digital/actions/workflows/ci.yml/badge.svg)](https://github.com/yhau1989/JavaScript-BackEnd-Test-Apply-Digital/actions/workflows/ci.yml)
+
 ## Init project (dev mode)
 
 1. use node v22
