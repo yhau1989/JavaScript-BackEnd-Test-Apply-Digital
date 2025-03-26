@@ -1,13 +1,13 @@
-name: CI
-
 # Workflow Description
 # This workflow does the following:
 # 1. Sets up Node.js and installs the necessary dependencies.
 # 2. Runs linters to check the code quality.
 # 3. Runs unit tests.
 # 4. If linters or tests fail, the workflow stops and does not allow the commit or pull request.
-# 5. Uploads the test results and coverage reports.
+# 5. Writes in console the test results and coverage reports.
 # 6. Notifies the team if there are failures in linters or tests.
+
+name: CI
 
 on:
   push:
@@ -24,12 +24,13 @@ jobs:
     strategy:
       matrix:
         node-version: [22.x]
-      fail-fast: false # Ensures that all steps run, even if one fails
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Step 2: Set up Node.js and install dependencies
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -38,28 +39,23 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Step 3: Run linters to check code quality
       - name: Run linters
         run: npm run lint
-        continue-on-error: false # If linter fails, the workflow will fail
 
+      # Step 4: Run unit tests
       - name: Run tests
         run: npm test
-        continue-on-error: false # If tests fail, the workflow will fail
 
-      - name: Upload test results
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: test-results.xml
+      # Step 5: Output the test results in JSON format
+      - name: Output test results and coverage
+        run: |
+          echo "Test results:"
+          cat test-results.json  # Display JSON test results
+          echo "Coverage report:"
+          cat coverage/report.txt  # Example for displaying coverage, adjust based on your setup
 
-      - name: Upload coverage report
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage-report
-          path: coverage/
-
+      # Step 6: Notify the team if linters or tests fail
       - name: Notify team on failure
         if: failure()
-        run: echo "Tests or linters failed. Please check the test results and coverage report."
+        run: echo "Tests or linters failed. Please check the logs for details."
