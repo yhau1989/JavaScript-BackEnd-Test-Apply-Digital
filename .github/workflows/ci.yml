@@ -45,8 +45,6 @@ jobs:
 
       # Step 4: Run unit tests
       - name: Run tests
-        env:
-          JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: npm test
 
       # Step 5: Output the test results in JSON format
