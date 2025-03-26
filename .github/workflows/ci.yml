@@ -1,13 +1,12 @@
-# Workflow Description
+name: CI
+
+# Workflow description
 # This workflow does the following:
 # 1. Sets up Node.js and installs the necessary dependencies.
 # 2. Runs linters to check the code quality.
 # 3. Runs unit tests.
 # 4. If linters or tests fail, the workflow stops and does not allow the commit or pull request.
-# 5. Writes in console the test results and coverage reports.
-# 6. Notifies the team if there are failures in linters or tests.
-
-name: CI
+# 5. Notifies the team if there are failures in linters or tests.
 
 on:
   push:
@@ -26,11 +25,9 @@ jobs:
         node-version: [22.x]
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js and install dependencies
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -39,23 +36,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 3: Run linters to check code quality
       - name: Run linters
         run: npm run lint
 
-      # Step 4: Run unit tests
       - name: Run tests
         run: npm test
 
-      # Step 5: Output the test results in JSON format
-      - name: Output test results and coverage
-        run: |
-          echo "Test results:"
-          cat test-results.json  # Display JSON test results
-          echo "Coverage report:"
-          cat coverage/report.txt  # Example for displaying coverage, adjust based on your setup
-
-      # Step 6: Notify the team if linters or tests fail
       - name: Notify team on failure
         if: failure()
         run: echo "Tests or linters failed. Please check the logs for details."
