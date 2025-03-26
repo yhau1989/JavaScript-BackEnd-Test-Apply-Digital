@@ -13,7 +13,7 @@
 4. Run `yarn lint`
 5. Run `yarn test:cov`
 6. Run `yarn start:dev`
-7. Import Postman configuration from
+7. Import Postman configuration from [this](https://github.com/yhau1989/JavaScript-BackEnd-Test-Apply-Digital/blob/main/ApplyDigital-SamuelPilay.postman_collection.json)
 8. Happy testing API 🙂
 
 ## Docker
