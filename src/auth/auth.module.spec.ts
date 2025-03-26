@@ -15,7 +15,7 @@ describe('AuthModule', () => {
         ConfigModule.forRoot(),
         PassportModule.register({ defaultStrategy: 'jwt' }),
         JwtModule.register({
-          secret: process.env.JWT_SECRET || 'test_secret',
+          secret: 'test_secret',
           signOptions: { expiresIn: '1h' },
         }),
       ],
